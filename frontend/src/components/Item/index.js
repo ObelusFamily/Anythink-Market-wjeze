@@ -28,13 +28,6 @@ class Item extends React.Component {
         agent.Comments.forItem(this.props.match.params.id),
       ])
     );
-
-  }
-  
-  componentDidMount() {
-    
-    console.log("HERRRRRRRR");
-    console.log(this.props.item);
   }
 
   componentWillUnmount() {
@@ -58,7 +51,9 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={this.props.item.image ? this.props.item.image : placeholder}
+                src={
+                  this.props.item.image ? this.props.item.image : placeholder
+                }
                 alt={this.props.item.title}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
